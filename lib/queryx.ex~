@@ -1,0 +1,24 @@
+defmodule Queryx do
+  # use Hound.Helpers
+
+  def main(args) do
+    IO.puts "Queryx - declarative query language for web systems"
+    IO.puts "Starting ..."
+    # Hound.start_session
+    # navigate_to "http://elixir-lang.org"
+    contents = download("http://elixir-lang.org")
+    IO.puts contents
+  end
+
+  def download(src) do
+    #IO.puts "Downloading #{src} -> #{output_filename}"
+    HTTPoison.get!(src).body
+    #File.write!(output_filename, body)
+    #IO.puts "Done Downloading #{src} -> #{output_filename}"
+  end
+ 
+  #def show(var) do
+    #  
+    #end
+     
+end
