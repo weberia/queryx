@@ -2,13 +2,15 @@ defmodule Queryx.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :queryx,
-     version: "0.0.1",
-     elixir: "~> 1.2",
-     escript: [main_module: Queryx],
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps]
+    [
+			app: :queryx,
+			version: "0.0.1",
+			elixir: "~> 1.2",
+			escript: [main_module: Queryx],
+			build_embedded: Mix.env == :prod,
+			start_permanent: Mix.env == :prod,
+			deps: deps
+		]
   end
 
   # Configuration for the OTP application
@@ -34,9 +36,10 @@ defmodule Queryx.Mixfile do
     [
       {:httpoison, "~> 0.8.1"},
       {:floki, "~> 0.7.1"},
-      {:rethinkdb, "~> 0.2.2"},
-      {:hound, "~> 0.8.2", overide: true }
+      {:rethinkdb, "~> 0.3.1"},
+      {:hound, "~> 0.8.2", overide: true}
     ]
   end
 end
+
 

@@ -18,11 +18,11 @@ defmodule Queryx do
     IO.puts "Starting ..."
     # Hound.start_session
     # navigate_to "http://elixir-lang.org"
-    contents = download("http://elixir-lang.org")
+    contents = interact("http://elixir-lang.org")
     IO.puts contents
   end
 
-  def download(src) do
+  defp interact(src) do
     #IO.puts "Downloading #{src} -> #{output_filename}"
     HTTPoison.get!(src).body
     #File.write!(output_filename, body)

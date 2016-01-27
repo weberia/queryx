@@ -1,6 +1,6 @@
 # Queryx
 
-**TODO: Add description**
+A declarative query language interpreter and processor (IfA language) implementation for client.
 
 ## Installation
 
